@@ -57,7 +57,7 @@ export default class App extends Component {
     });
   };
   onValueChange = (value) => {
-    this.state.activeDates.indexOf(value) != -1
+    this.state.activeDates.indexOf(value) !== -1
       ? this.setState({color: '#9281f7'})
       : this.setState({color: '#dee2e3'});
     this.setState({value});

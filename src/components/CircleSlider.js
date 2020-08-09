@@ -27,7 +27,8 @@ class CircleSlider extends React.Component {
     this.polarToCartesian = (angle) => {
       const r = this.props.sliderRadius;
       const hC = this.props.sliderWidth / 2 + this.props.sliderRadius;
-      const a = ((angle - 90) * Math.PI) / 180.0;
+      const a =
+        ((angle - 90 - this.props.startDegree * 12.61) * Math.PI) / 180.0;
       const x = hC + r * Math.cos(a);
       const y = hC + r * Math.sin(a);
       return {x, y};
